@@ -1,0 +1,12 @@
+<h1>Szczegóły treningu</h1>
+<ul class="list-group mb-3">
+  <li class="list-group-item"><strong>Typ:</strong> <%= training.type %></li>
+  <li class="list-group-item"><strong>Intensywność:</strong> <%= training.intensity %></li>
+  <li class="list-group-item"><strong>Czas:</strong> <%= training.duration %> minut</li>
+  <li class="list-group-item"><strong>Data:</strong> <%= training.date %></li>
+</ul>
+<a href="/trainings" class="btn btn-secondary">Powrót</a>
+<a href="/trainings/<%= training.id %>/edit" class="btn btn-warning">Edytuj</a>
+<form action="/trainings/<%= training.id %>/delete" method="post" class="d-inline">
+  <button class="btn btn-danger">Usuń</button>
+</form>

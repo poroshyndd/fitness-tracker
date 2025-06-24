@@ -1,0 +1,25 @@
+<h1><%= training.id ? 'Edycja treningu' : 'Nowy trening' %></h1>
+<form action="<%= training.id ? '/trainings/' + training.id : '/trainings' %>" method="post">
+  <div class="mb-3">
+    <label class="form-label">Typ treningu</label>
+    <input name="type" class="form-control" required value="<%= training.type || '' %>">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Intensywność</label>
+    <select name="intensity" class="form-select">
+      <option <%= training.intensity==='Niska'  ? 'selected' : '' %>>Niska</option>
+      <option <%= training.intensity==='Średnia'? 'selected' : '' %>>Średnia</option>
+      <option <%= training.intensity==='Wysoka' ? 'selected' : '' %>>Wysoka</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Czas trwania (min)</label>
+    <input type="number" name="duration" class="form-control" required value="<%= training.duration || '' %>">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Data</label>
+    <input type="date" name="date" class="form-control" value="<%= training.date || '' %>">
+  </div>
+  <button class="btn btn-success">Zapisz</button>
+  <a href="/trainings" class="btn btn-secondary">Anuluj</a>
+</form>

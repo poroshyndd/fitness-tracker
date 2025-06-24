@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title><%= (typeof title !== 'undefined' ? title : 'Fitness Tracker') %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="/trainings">Fitness Tracker</a>
+      <div class="ms-auto">
+        <% if (currentUser) { %>
+          <a class="btn btn-outline-primary me-2" href="/trainings">Treningi</a>
+          <a class="btn btn-outline-success me-2" href="/progress">Postępy</a>
+          <a class="btn btn-outline-info me-2" href="/calendar">Kalendarz</a>
+          <a class="btn btn-outline-warning me-2" href="/profile">Profil</a>
+          <a class="btn btn-outline-danger" href="/logout">Wyloguj</a>
+        <% } else { %>
+          <a class="btn btn-outline-secondary me-2" href="/login">Zaloguj</a>
+          <a class="btn btn-primary" href="/register">Utwórz konto</a>
+        <% } %>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <%- body %>
+  </div>
+</body>
+</html>
