@@ -32,9 +32,9 @@ Projekt został stworzony indywidualnie jako zaliczenie przedmiotu z zakresu two
 	•	PostgreSQL z aktywną bazą danych
 
 🔧 Kroki:
-	1.	Klonowanie repozytorium
+1.	Klonowanie repozytorium
  git clone https://github.com/poroshyndd/fitness-tracker.git
-cd fitness-tracker
+ cd fitness-tracker
 2.	Instalacja zależności
 npm install 
 	3.	Utworzenie pliku .env
