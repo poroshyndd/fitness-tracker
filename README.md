@@ -41,8 +41,9 @@ Projekt został stworzony indywidualnie jako zaliczenie przedmiotu z zakresu two
 3. **Utworzenie pliku .env**
  DATABASE_URL=
  PORT=3000
+
 4.**Start**
-   npm run dev
+   npm start
    
  ## 📂 Struktura aplikacji  
  
