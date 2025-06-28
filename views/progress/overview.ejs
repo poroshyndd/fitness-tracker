@@ -1,5 +1,20 @@
 <h1 class="mb-4">Postępy</h1>
 
+<div class="btn-group mb-3" role="group" aria-label="Period">
+  <a href="?period=week"
+     class="btn btn-outline-primary <%= period==='week' ? 'active' : '' %>">
+    7 dni
+  </a>
+  <a href="?period=month"
+     class="btn btn-outline-primary <%= period==='month' ? 'active' : '' %>">
+    Miesiąc
+  </a>
+  <a href="?period=all"
+     class="btn btn-outline-primary <%= period==='all' ? 'active' : '' %>">
+    Wszystko
+  </a>
+</div>
+
 <div class="mb-4" style="max-width:600px">
   <canvas id="trainingsChart"></canvas>
 </div>
@@ -15,7 +30,10 @@
       type: 'bar',
       data: {
         labels,
-        datasets: [{ label: 'Liczba treningów', data: counts }]
+        datasets: [{
+          label: 'Liczba treningów',
+          data: counts
+        }]
       },
       options: {
         scales: { y: { beginAtZero: true } }
@@ -24,5 +42,16 @@
   );
 </script>
 
-<p>Łącznie treningów w ostatnich 7 dniach: <strong><%= total %></strong></p>
+<p>
+  Łącznie treningów
+  <% if (period === 'all') { %>
+    w całej historii:
+  <% } else if (period === 'month') { %>
+    w ostatnim miesiącu:
+  <% } else { %>
+    w ostatnich 7 dniach:
+  <% } %>
+  <strong><%= total %></strong>
+</p>
+
 <a href="/trainings" class="btn btn-primary">Powrót do listy</a>
