@@ -11,7 +11,6 @@ const app = express()
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
-// одноразовый главный лэйаут для всех страниц
 app.use(expressLayouts)
 app.set('layout', 'layouts/main')
 
