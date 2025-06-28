@@ -43,6 +43,7 @@ Projekt został stworzony indywidualnie jako zaliczenie przedmiotu z zakresu two
  PORT=3000
 
 4.**Start**
+  
    npm start
    
  ## 📂 Struktura aplikacji  
