@@ -46,6 +46,7 @@ Projekt został stworzony indywidualnie jako zaliczenie przedmiotu z zakresu two
    
  ## 📂 Struktura aplikacji  
  
+```plaintext
 fitness-tracker/
 │
 ├── controllers/         # Logika aplikacji: authController, trainingController, userController
@@ -57,7 +58,7 @@ fitness-tracker/
 ├── config/              # Konfiguracja bazy danych
 ├── .env                 # Plik konfiguracyjny środowiska (lokalnie)
 ├── index.js             # Główny plik aplikacji Express
-└── README.md            # Dokumentacja projektu
+└── README.md            # Dokumentacja projektuu
 
 
 
