@@ -1,57 +1,51 @@
-Fitness Tracker
+# Fitness Tracker
 
-🏷️ Nazwa projektu
+## 🏷️ Nazwa projektu
 
-Fitness Tracker – System organizacji treningów fitness 
+**Fitness Tracker** – System organizacji treningów fitness
 
-
-📝 Opis projektu
+## 📝 Opis projektu
 
 Aplikacja webowa służąca do planowania, monitorowania oraz zarządzania treningami fitness. Umożliwia użytkownikom tworzenie własnych planów treningowych, śledzenie postępów oraz przeglądanie statystyk aktywności fizycznej.
 
 Projekt został stworzony indywidualnie jako zaliczenie przedmiotu z zakresu tworzenia aplikacji internetowych w Node.js, z użyciem wzorca MVC i techniki Server-Side Rendering (SSR).
 
+## 🚀 Funkcjonalności
 
-🚀 Funkcjonalności
-	•	✅ Rejestracja i logowanie użytkownika (z wykorzystaniem bcrypt i sesji)
-	•	✅ Tworzenie, edytowanie i usuwanie treningów (typ, intensywność, czas, data)
-	•	✅ Lista treningów z możliwością edycji i usunięcia
-	•	✅ Widok szczegółowy treningu
-	•	✅ Statystyki:
-	•	całkowita liczba treningów
-	•	średnia liczba treningów dziennie
-	•	najbardziej i najmniej aktywne dni
-	•	✅ Interaktywny kalendarz z zaznaczonymi dniami treningowymi i listą pod spodem
-	•	✅ Profil użytkownika (imię, e-mail, wzrost, waga, wiek, cel)
-	•	✅ Nawigacja dynamiczna w zależności od stanu zalogowania
+- ✅ Rejestracja i logowanie użytkownika (z wykorzystaniem bcrypt i sesji)  
+- ✅ Tworzenie, edytowanie i usuwanie treningów (typ, intensywność, czas, data)  
+- ✅ Lista treningów z możliwością edycji i usunięcia  
+- ✅ Widok szczegółowy treningu  
+- ✅ Statystyki:
+  - całkowita liczba treningów  
+  - średnia liczba treningów dziennie  
+  - najbardziej i najmniej aktywne dni  
+- ✅ Interaktywny kalendarz z zaznaczonymi dniami treningowymi i listą pod spodem  
+- ✅ Profil użytkownika (imię, e-mail, wzrost, waga, wiek, cel)  
+- ✅ Nawigacja dynamiczna w zależności od stanu zalogowania  
 
- 🛠️ Instrukcja uruchomienia aplikacji
+## 🛠️ Instrukcja uruchomienia aplikacji
 
-✅ Wymagania:
-	•	Node.js (wersja 18+)
-	•	PostgreSQL z aktywną bazą danych
+### ✅ Wymagania
 
-🔧 Kroki:
-1.	Klonowanie repozytorium
+- Node.js (wersja 18+)  
+- PostgreSQL z aktywną bazą danych  
+
+### 🔧 Kroki
+
+1. **Klonowanie repozytorium**  
  git clone https://github.com/poroshyndd/fitness-tracker.git
  cd fitness-tracker
-2.	Instalacja zależności
-npm install 
-	3.	Utworzenie pliku .env
- DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres 
-DB_PASSWORD=...
-DB_NAME=fitness_db
-SESSION_SECRET=sekretnyklucz
-	4.	Uruchomienie aplikacji
- npm run dev  
-
-
-
-
-
-📂 Struktura aplikacji
+2. **Instalacja zależności**
+  npm install
+3. **Utworzenie pliku .env**
+ DATABASE_URL=
+ PORT=3000
+4.**Start**
+   npm run dev
+   
+ ## 📂 Struktura aplikacji  
+ 
 fitness-tracker/
 │
 ├── controllers/         # Logika aplikacji: authController, trainingController, userController
@@ -67,7 +61,7 @@ fitness-tracker/
 
 
 
- 📦 Użyte biblioteki zewnętrzne
+ ##📦 Użyte biblioteki zewnętrzne
 	•	express – framework backendowy
 	•	ejs – silnik szablonów SSR
 	•	express-ejs-layouts – layouty dla EJS
