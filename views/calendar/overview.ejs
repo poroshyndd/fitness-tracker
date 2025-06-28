@@ -22,11 +22,11 @@
           <% if (day < 1 || day > daysInMonth) { %>
             <td></td>
           <% } else {
-               const dd = String(day).padStart(2,'0')
-               const mm = String(month+1).padStart(2,'0')
-               const key = `${year}-${mm}-${dd}`
-               const cnt = countsMap[key] || 0
-               const cls = cnt > 0 ? 'table-success' : ''
+               const dd = String(day).padStart(2,'0');
+               const mm = String(month+1).padStart(2,'0');
+               const key = `${year}-${mm}-${dd}`;
+               const cnt = countsMap[key] || 0;
+               const cls = cnt > 0 ? 'table-success' : '';
           %>
             <td class="<%= cls %>" style="cursor:pointer"
                 onclick="document.getElementById('item-<%= key %>').scrollIntoView()">
@@ -46,7 +46,7 @@
 <% if (trainingsList.length) { %>
   <ul class="list-group">
     <% trainingsList.forEach(t => {
-         const d = t.date.toISOString().slice(0,10)
+     const d = t.date;
     %>
       <li id="item-<%= d %>" class="list-group-item d-flex justify-content-between">
         <div>
