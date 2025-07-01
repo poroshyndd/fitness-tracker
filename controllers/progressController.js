@@ -1,4 +1,4 @@
-onst { Training, sequelize } = require('../models');
+const { Training, sequelize } = require('../models');
 const { Op } = require('sequelize');
 
 function formatDate(d) {
